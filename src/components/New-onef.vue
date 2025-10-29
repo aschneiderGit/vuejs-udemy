@@ -2,6 +2,7 @@
   <h1>Email : {{ getData().email }}</h1>
   <h1>Mobile : {{ getData().phone }}</h1>
   <h1>Name : {{ getName("Joe") }}</h1>
+  <button v-on:click="alertData('hello')">Click Here</button>
 </template>
 <script>
 export default {
@@ -21,6 +22,9 @@ export default {
         email: this.email,
         phone: this.phone,
       };
+    },
+    alertData(data) {
+      alert(data);
     },
   },
 };
