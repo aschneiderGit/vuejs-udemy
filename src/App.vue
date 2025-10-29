@@ -3,12 +3,14 @@
   <HelloWorld msg="MetaBrain.org" />
   <PAGES />
   <PageOne />
+  <InputBoxes />
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import PAGES from "./components/New-onef.vue";
-import PageOne from "./components/pages.vue";
+import PageOne from "./components/PageOne.vue";
+import InputBoxes from "./components/InputeBoxes.vue";
 
 export default {
   name: "App",
@@ -16,6 +18,7 @@ export default {
     HelloWorld,
     PAGES,
     PageOne,
+    InputBoxes,
   },
 };
 </script>
