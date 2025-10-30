@@ -9,13 +9,12 @@
     </li>
   </ul>
   <div>
-    <h1 v-html="emailadress"></h1>
-    <h1 v-html="id"></h1>
+    <div v-html="emailadress"></div>
+    <div v-html="id"></div>
   </div>
   <h1>Class Binding</h1>
   <h3 :class="{ yellow: color }">Dynamic class</h3>
   <button v-on:click="color = !color">change the color</button>
-  <Newuser />
 </template>
 <script>
 import Newuser from "./NewUser.vue";
@@ -31,7 +30,7 @@ export default {
       users: [
         {
           name: "jackson",
-          email: "jackson454@gmail.com",
+          email: "<h1>jackson454@gmail.com</h1>",
         },
         {
           name: "jamws",
@@ -51,8 +50,8 @@ export default {
         },
       ],
       names: "peter",
-      emailadress: "<h3>peter123@gmail.com<h3/>",
-      id: "<h3> 16465466 <h3/>",
+      emailadress: "<p>peter123@gmail.com<p/>",
+      id: "<h1> 16465466 <h1/>",
       color: false,
     };
   },
