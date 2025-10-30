@@ -1,15 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <IfCondition />
+  <ForLoop />
 </template>
 
 <script>
-import IfCondition from "./components/IfCondition.vue";
+import ForLoop from "./components/ForLoop.vue";
 
 export default {
   name: "App",
   components: {
-    IfCondition,
+    ForLoop,
   },
 };
 </script>
