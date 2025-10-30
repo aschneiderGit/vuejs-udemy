@@ -1,15 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <ForLoop />
+  <PageOne />
 </template>
 
 <script>
-import ForLoop from "./components/ForLoop.vue";
+import PageOne from "./components/PageOne.vue";
 
 export default {
   name: "App",
   components: {
-    ForLoop,
+    PageOne,
   },
 };
 </script>

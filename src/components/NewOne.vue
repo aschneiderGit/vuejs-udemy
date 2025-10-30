@@ -6,7 +6,7 @@
 </template>
 <script>
 export default {
-  name: "PAGES",
+  name: "NewOne",
   data() {
     return {
       email: "abc@gmail.com",
