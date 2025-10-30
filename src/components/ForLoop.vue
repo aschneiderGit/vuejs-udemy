@@ -6,7 +6,12 @@
     </li>
   </ul>
   <br />
-  <ChildComponent name="Tony stark" :user="user" :getData="getData" />
+  <ChildComponent
+    name="Tony stark"
+    :user="user"
+    :getData="getData"
+    :giveToParent="getChildrenInfo"
+  />
 </template>
 <script>
 import ChildComponent from "./ChildComponent.vue";
@@ -21,6 +26,9 @@ export default {
   methods: {
     getData() {
       alert("Methods called");
+    },
+    getChildrenInfo(childrenInfo) {
+      alert("i'm the parent and you are ? \n" + childrenInfo);
     },
   },
   components: { ChildComponent },

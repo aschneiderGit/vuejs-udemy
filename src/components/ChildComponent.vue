@@ -15,6 +15,7 @@
   <h1>Class Binding</h1>
   <h3 :class="{ yellow: color }">Dynamic class</h3>
   <button v-on:click="color = !color">change the color</button>
+  <button v-on:click="giveToParent('i m a children')">give to parent</button>
 </template>
 <script>
 import Newuser from "./NewUser.vue";
@@ -24,6 +25,7 @@ export default {
     name: String,
     user: Object,
     getData: Function,
+    giveToParent: Function,
   },
   data() {
     return {
