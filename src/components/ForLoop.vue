@@ -1,53 +1,33 @@
 <template>
-  <h1 id="for-loop">For Loop</h1>
+  <h1 id="pages3">For Loop</h1>
   <ul>
-    <li v-for="language in stacks" :key="language">
-      {{ language }}
+    <li v-for="program in technology" :key="program">
+      {{ program }}
     </li>
   </ul>
   <br />
-  <ul>
-    <li v-for="user in users" :key="user.email">
-      {{ user.name }}
-      <ul>
-        {{
-          user.email
-        }}
-      </ul>
-      <ul>
-        {{
-          user.tel
-        }}
-      </ul>
-    </li>
-  </ul>
+  <ChildComponent name="Tony stark" :user="user" :getData="getData" />
 </template>
 <script>
+import ChildComponent from "./ChildComponent.vue";
 export default {
   name: "ForLoop",
   data() {
     return {
-      stacks: ["PHP", "C#", "JS", "Java", "Python"],
-      users: [
-        {
-          name: "Jack",
-          email: "jack@gmail.com",
-          tel: +338938393,
-        },
-        {
-          name: "Joe",
-          email: "joe@gmail.com",
-          tel: +5555555,
-        },
-        {
-          name: "Luck",
-          email: "luck@gmail.com",
-          tel: +4000000,
-        },
-      ],
+      technology: ["PHP", "JavaScript", "C++", "C-sharp"],
+      user: { name: "Tony", email: "tony@gmail.com" },
     };
   },
-  methods: {},
+  methods: {
+    getData() {
+      alert("Methods called");
+    },
+  },
+  components: { ChildComponent },
 };
 </script>
-<style scoped></style>
+<style>
+#pages3 {
+  color: rgb(211, 25, 0);
+}
+</style>
