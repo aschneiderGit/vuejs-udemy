@@ -1,15 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <ForLoop />
+  <FormComponent />
 </template>
 
 <script>
-import ForLoop from "./components/ForLoop.vue";
+import FormComponent from "./components/FormComponent.vue";
 
 export default {
   name: "App",
   components: {
-    ForLoop,
+    FormComponent,
   },
 };
 </script>
