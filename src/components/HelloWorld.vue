@@ -1,14 +1,31 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-  </div>
+  <ChildSlot>
+    <template v-slot:img>
+      <img src="https://cdn.myanimelist.net/images/anime/1147/112650.jpg" />
+    </template>
+    <template v-slot:text>
+      <h1>{{ msg }}</h1>
+    </template>
+  </ChildSlot>
+  <ChildSlot>
+    <template #img>
+      <img src="https://cdn.myanimelist.net/images/anime/1147/112650.jpg" />
+    </template>
+  </ChildSlot>
 </template>
 
 <script>
+import ChildSlot from "./ChildSlot.vue";
+
 export default {
   name: "HelloWorld",
-  props: {
-    msg: String,
+  data() {
+    return {
+      msg: "Hello Word",
+    };
+  },
+  components: {
+    ChildSlot,
   },
 };
 </script>
