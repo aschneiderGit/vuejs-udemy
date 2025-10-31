@@ -38,6 +38,7 @@ export default {
   name: "FormComponent",
   data() {
     return {
+      passwordAlert: false,
       form: {
         username: "",
         password: "",
@@ -56,6 +57,16 @@ export default {
       }
       console.table("form data: " + this.form.toString());
       console.table("login data: " + this.saveData);
+    },
+  },
+  watch: {
+    "form.password"(p) {
+      if (p.length === 8 && !this.passwordAlert) {
+        alert("you got a strong password");
+        this.passwordAlert = true;
+      } else if (p.length < 8) {
+        this.passwordAlert = false;
+      }
     },
   },
 };
