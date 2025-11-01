@@ -12,7 +12,7 @@ const routes = [
   },
   {
     name: "First",
-    path: "/1",
+    path: "/1/:number?",
     component: FirstComponent,
   },
   {
