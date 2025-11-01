@@ -1,15 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HomeComponent />
+  <RouterLink to="/"> Home</RouterLink>
+  <RouterLink to="/1/2"> First </RouterLink>
+  <RouterLink to="/second"> 2nd </RouterLink>
+  <RouterView></RouterView>
 </template>
 
 <script>
-import HomeComponent from "./components/HomeComponent.vue";
+//import HomeComponent from "./components/HomeComponent.vue";
 
 export default {
   name: "App",
   components: {
-    HomeComponent,
+    //HomeComponent,
   },
 };
 </script>
