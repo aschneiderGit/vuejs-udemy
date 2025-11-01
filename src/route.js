@@ -3,6 +3,7 @@ import HomeComponent from "./components/HomeComponent.vue";
 import FirstComponent from "./components/FirstComponent.vue";
 import SecondComponent from "./components/SecondComponent.vue";
 import NotFound from "./components/NotFound.vue";
+import ApiCall from "./components/ApiCall.vue";
 //import ThirdComponent from "./components/ThirdComponent.vue";
 
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
     name: "2nd",
     path: "/second",
     component: SecondComponent,
+  },
+  {
+    name: "ApiCall",
+    path: "/api/:pageNumber",
+    component: ApiCall,
   },
   {
     name: "404",
